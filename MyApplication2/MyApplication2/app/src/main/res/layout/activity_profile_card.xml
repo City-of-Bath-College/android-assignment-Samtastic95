@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imgPicture"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="#ffcc00"
+        android:layout_above="@id/lblQuestion"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <ImageView
+        android:id="@+id/BannerPicture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/samtastic"
+        android:layout_marginLeft="30dp"
+
+
+        />
+
+
+
+<!-- location things-->
+
+    <ImageView
+        android:id="@+id/iconlocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/iconlocation"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/BannerPicture"
+        android:layout_marginTop="40dp"
+        android:layout_marginleft="15dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Bristol, England"
+        android:id="@+id/lblLocation"
+        android:layout_below="@+id/BannerPicture"
+        android:layout_toRightOf="@id/iconlocation"
+        android:layout_marginTop="63dp" />
+
+
+
+    <!-- birthday things-->
+    <ImageView
+        android:id="@+id/iconbirthday"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/iconbirthday"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/iconlocation"
+        android:layout_marginleft="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21st March"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/iconlocation"
+        android:layout_toRightOf="@id/iconbirthday"
+        android:layout_marginTop="20dp"/>
+
+    <!-- github things-->
+
+    <ImageView
+        android:id="@+id/icongithub"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/githubicon"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/textview3"
+        android:layout_marginleft="15dp"
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YMy github name is Samtastic95."
+        android:id ="@+id/textView4"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_toRightOf="@id/iconweb"
+        />
+
+    <ImageView
+        android:id="@+id/iconweb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/githubicon"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginleft="15dp"
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sam Locket"
+        android:id="@+id/textView2"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:phoneNumber="true" />
+
+
+
+    <TextView
+
+      android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can find me online using the nickanmes 'Samlaptop' and 'Samtastic."
+        android:id ="@+id/textView4"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_toRightOf="@id/iconweb"
+        />
+
+
+    <ImageView
+        android:id="@+id/iconweb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/web"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginleft="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/iconweb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/web"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginleft="15dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
