@@ -34,7 +34,6 @@
         android:layout_marginLeft="30dp"
         android:layout_below="@id/BannerPicture"
         android:layout_marginTop="40dp"
-        android:layout_marginleft="15dp"
         />
 
 
@@ -58,7 +57,6 @@
         android:src="@drawable/iconbirthday"
         android:layout_marginLeft="30dp"
         android:layout_below="@id/iconlocation"
-        android:layout_marginleft="15dp"
         />
 
     <TextView
@@ -78,20 +76,10 @@
         android:layout_height="40dp"
         android:src="@drawable/githubicon"
         android:layout_marginLeft="30dp"
-        android:layout_below="@id/textview3"
-        android:layout_marginleft="15dp"
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YMy github name is Samtastic95."
-        android:id ="@+id/textView4"
-        android:layout_marginLeft="15dp"
-        android:layout_below="@+id/textView4"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_toRightOf="@id/iconweb"
+        android:layout_below="@id/textView3"
         />
+
+
 
     <ImageView
         android:id="@+id/iconweb"
@@ -100,9 +88,19 @@
         android:src="@drawable/githubicon"
         android:layout_marginLeft="30dp"
         android:layout_below="@id/textView3"
-        android:layout_marginleft="15dp"
+        />
 
+    <TextView
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YMy github name is Samtastic95."
+        android:id ="@+id/textView4"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_toRightOf="@id/iconweb"
+        />
 
 
 
@@ -113,9 +111,10 @@
         android:text="Sam Locket"
         android:id="@+id/textView2"
         android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:phoneNumber="true" />
+        android:layout_below="@id/BannerPicture"
+        android:phoneNumber="true"
+        android:layout_alignParentRight="true"
+        />
 
 
 
@@ -124,33 +123,13 @@
       android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You can find me online using the nickanmes 'Samlaptop' and 'Samtastic."
-        android:id ="@+id/textView4"
+        android:id ="@+id/textView5"
         android:layout_marginLeft="15dp"
         android:layout_below="@+id/textView3"
         android:layout_alignStart="@+id/textView3"
         android:layout_toRightOf="@id/iconweb"
         />
 
-
-    <ImageView
-        android:id="@+id/iconweb"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/web"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@id/textView3"
-        android:layout_marginleft="15dp"
-        />
-
-    <ImageView
-        android:id="@+id/iconweb"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/web"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@id/textView3"
-        android:layout_marginleft="15dp"
-        />
 
 
 

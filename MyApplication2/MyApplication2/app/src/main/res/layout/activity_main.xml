@@ -26,6 +26,8 @@
         android:textSize="24sp"
         android:padding="10dp"/>
 
+
+
     <Button
         android:id="@+id/btnFalse"
         android:layout_width="150dp"
