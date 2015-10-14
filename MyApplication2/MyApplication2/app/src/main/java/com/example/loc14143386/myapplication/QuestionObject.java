@@ -10,21 +10,21 @@ public class QuestionObject {
     private boolean answer;
     private int picture;
 
-    Public QuestionObject(String question, boolean answer, int picture) {
+    public QuestionObject(String question, boolean answer, int picture) {
 
         this.question = question;
         this.answer = answer;
         this.picture = picture;
     }
     public String getQuestion() {
-        return Question;
+        return question;
     }
     public boolean isAnswer() {
-return answer
+return answer;
     }
     public int getPicture() {
 
-        return picure;
+        return picture;
 
     }
 

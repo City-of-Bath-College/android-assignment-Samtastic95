@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     //variables go here
@@ -19,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tblQuestion;
     private ImageView imgPicture;
 
-   // private List<QuestionObject> questions;
+    private List<QuestionObject> questions;
 
 
     @Override
@@ -27,11 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnFalse = (Button)findViewById(R.id.btnFalse);
-        btnTrue = (Button) findViewById(R. id.btnTrue);
-        tblQuestion = (TextView) findViewById(R. id. lblQuestion);
-        imgPicture = (ImageView) findViewById(R. id. imgPicture);
-
+        btnFalse = (Button) findViewById(R.id.btnFalse);
+        btnTrue = (Button) findViewById(R.id.btnTrue);
+        tblQuestion = (TextView) findViewById(R.id.lblQuestion);
+        imgPicture = (ImageView) findViewById(R.id.imgPicture);
 
 
         //Oncclick Listeners
@@ -49,11 +51,43 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //correct!
                 Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
+        generateQuestions();
+
+
+
+
     } // ends onCreate
 
+
+    private void generateQuestions(){
+
+        questions = new ArrayList<>();
+        QuestionObject one = new QuestionObject("Dan Klistner invented Bop It.",true, R.drawable.klistner);
+        questions.add(one);
+        QuestionObject two = new QuestionObject("Bop It Original was made in 1996.",true, R.drawable.bopit1996);
+        questions.add(two) ;
+        QuestionObject three = new QuestionObject("Dan Klistner invented Bop It Bounce.",false, R.drawable.bopit2010);
+        questions.add(three) ;
+        QuestionObject four = new QuestionObject("Bop It was re-designed in 2008 in an oval shape.",true, R.drawable.bopit2008logo);
+        questions.add (four) ;
+        QuestionObject five = new QuestionObject("Tiger Electronics released a game with six coloured knobs sticking out in 1996.",true, R.drawable.tigerelectronics);
+        questions.add (five) ;
+        QuestionObject six = new QuestionObject("Bop It Extreme was re-released with Bop It Shout programming in 2011.",true, R.drawable.bopit2008logo) ;
+        questions.add (six) ;
+        QuestionObject seven = new QuestionObject("Simon was re-invented by Klistner in 2013.",true, R.drawable.simonswipelogo);
+        questions.add (seven)
+        QuestionObject eight = new QuestionObject ("Most electronic games have a hidden test mode.", true, R.drawable.bopit2008logo);
+        QuestionObject nine = new QuestionObject ("Electronic games with no visual tasks are played by people who are blind.",true, R.drawable.braile);
+        QuestionObject ten = new QuestionObject ("Brian Goldner, CEO of Hasbro, says that Bop It is one of the most annoying games on the market.",false, R.drawable.goldner_191);
+
+
+
+    }
 
 } //ends activity
 
