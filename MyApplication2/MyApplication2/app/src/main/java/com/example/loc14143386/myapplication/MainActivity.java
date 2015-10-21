@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgPicture;
 
     private List<QuestionObject> questions;
+    private int index;
 
 
     @Override
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         tblQuestion = (TextView) findViewById(R.id.lblQuestion);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
 
+        index = 0;
 
         //Oncclick Listeners
 
@@ -77,18 +79,27 @@ public class MainActivity extends AppCompatActivity {
         questions.add (four) ;
         QuestionObject five = new QuestionObject("Tiger Electronics released a game with six coloured knobs sticking out in 1996.",true, R.drawable.tigerelectronics);
         questions.add (five) ;
-        QuestionObject six = new QuestionObject("Bop It Extreme was re-released with Bop It Shout programming in 2011.",true, R.drawable.bopit2008logo) ;
+        QuestionObject six = new QuestionObject("Bop It Extreme was re-released with Bop It Shout programming in 2011.",true, R.drawable.bopit2008logo);
         questions.add (six) ;
         QuestionObject seven = new QuestionObject("Simon was re-invented by Klistner in 2013.",true, R.drawable.simonswipelogo);
-        questions.add (seven)
+        questions.add (seven) ;
         QuestionObject eight = new QuestionObject ("Most electronic games have a hidden test mode.", true, R.drawable.bopit2008logo);
+        questions.add (eight);
         QuestionObject nine = new QuestionObject ("Electronic games with no visual tasks are played by people who are blind.",true, R.drawable.braile);
-        QuestionObject ten = new QuestionObject ("Brian Goldner, CEO of Hasbro, says that Bop It is one of the most annoying games on the market.",false, R.drawable.goldner_191);
-
+        questions.add (nine) ;
+        QuestionObject ten = new QuestionObject ("Brian Goldner, CEO of Hasbro, says that Bop It is one of the most annoying games on the market.",false, R.drawable.goldner);
+        questions.add (ten) ;
 
 
     }
+    private void setUpQuestion(){
+        currentQuestion = questions.get(index);
 
+        lblQuestion.setText(currentQuestion.getQuestion();
+        imgPicture.setImageResources(currentQuestion.getpicture);
+
+        index++;
+    }
 } //ends activity
 
 
