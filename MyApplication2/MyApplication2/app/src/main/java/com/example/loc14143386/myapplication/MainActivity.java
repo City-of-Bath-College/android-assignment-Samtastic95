@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgPicture;
 
     private List<QuestionObject> questions;
+    private QuestionObject currentQuestion;
     private int index;
 
-
+    //Button true and button false code goes here //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Shows Correct Answer //
         btnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,12 +63,13 @@ public class MainActivity extends AppCompatActivity {
 
         generateQuestions();
 
+        setUpQuestion();
 
 
 
     } // ends onCreate
 
-
+// Questions go here. //
     private void generateQuestions(){
 
         questions = new ArrayList<>();
@@ -95,11 +99,22 @@ public class MainActivity extends AppCompatActivity {
     private void setUpQuestion(){
         currentQuestion = questions.get(index);
 
-        lblQuestion.setText(currentQuestion.getQuestion();
-        imgPicture.setImageResources(currentQuestion.getpicture);
+        tblQuestion.setText(currentQuestion.getQuestion());
+        imgPicture.setImageResource(currentQuestion.getPicture());
 
         index++;
     }
+
+    private void determineButtonPress(boolean theirAnswer){
+
+        //check if their answer matches expected answer
+        // if (generateQuestions().true )
+
+
+
+
+    }
+
 } //ends activity
 
 

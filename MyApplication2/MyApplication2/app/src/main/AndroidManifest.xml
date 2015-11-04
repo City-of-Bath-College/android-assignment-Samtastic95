@@ -24,6 +24,11 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile" >
         </activity>
+        <activity
+            android:name=".IntroductionActivity"
+            android:label="@string/title_activity_introduction" >
+
+        </activity>
     </application>
 
 </manifest>
