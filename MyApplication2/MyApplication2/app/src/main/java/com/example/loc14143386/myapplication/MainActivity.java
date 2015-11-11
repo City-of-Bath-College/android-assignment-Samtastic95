@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
         btnFalse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //wrong!!!
-                Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+
+
+                determineButtonPress(false);
             }
         });
 
@@ -54,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //correct!
-                Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
+                determineButtonPress(true);
 
 
             }
@@ -108,9 +108,20 @@ public class MainActivity extends AppCompatActivity {
     private void determineButtonPress(boolean theirAnswer){
 
         //check if their answer matches expected answer
-        // if (generateQuestions().true )
+                //right
+        if (currentQuestion.isAnswer() == theirAnswer){
+
+            ///here - tell them they were correct
+            Toast.makeText(MainActivity.this, "right!", Toast.LENGTH_SHORT).show();
+
+        } else{
+            //wrong answer
+            Toast.makeText(MainActivity.this, "wrong!", Toast.LENGTH_SHORT).show();
 
 
+        }
+
+        setUpQuestion();
 
 
     }
