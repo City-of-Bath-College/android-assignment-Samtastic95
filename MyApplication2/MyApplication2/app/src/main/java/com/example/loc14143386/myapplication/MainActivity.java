@@ -46,8 +46,13 @@ public class MainActivity extends AppCompatActivity {
         btnFalse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 //wrong!!!
               //  Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+=======
+
+
+>>>>>>> origin/master
                 determineButtonPress(false);
             }
         });
@@ -57,9 +62,14 @@ public class MainActivity extends AppCompatActivity {
         btnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 //correct!
               //  Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
                 determineButtonPress(true);
+=======
+                determineButtonPress(true);
+
+>>>>>>> origin/master
 
             }
         });
@@ -116,8 +126,13 @@ public class MainActivity extends AppCompatActivity {
     private void determineButtonPress(boolean theirAnswer){
 
         //check if their answer matches expected answer
-        // if (generateQuestions().true )
+                //right
+        if (currentQuestion.isAnswer() == theirAnswer){
 
+            ///here - tell them they were correct
+            Toast.makeText(MainActivity.this, "right!", Toast.LENGTH_SHORT).show();
+
+<<<<<<< HEAD
         if (theirAnswer == currentQuestion.isAnswer()){
             //correct
              Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
@@ -132,8 +147,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+=======
+        } else{
+            //wrong answer
+            Toast.makeText(MainActivity.this, "wrong!", Toast.LENGTH_SHORT).show();
+>>>>>>> origin/master
 
        setUpQuestion();
+
+        }
+
+        setUpQuestion();
 
 
     }
