@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private List<QuestionObject> questions;
     private QuestionObject currentQuestion;
     private int index;
+    private int score;
 
     //Button true and button false code goes here //
     @Override
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
 
         index = 0;
+        score = 0;
 
         //Oncclick Listeners
 
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //wrong!!!
-                Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+                determineButtonPress(false);
             }
         });
 
@@ -55,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //correct!
-                Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
-
+              //  Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
+                determineButtonPress(true);
 
             }
         });
@@ -103,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
         imgPicture.setImageResource(currentQuestion.getPicture());
 
         index++;
+        if (index == 10) {
+            index = 0;
+
+
+        }
     }
 
     private void determineButtonPress(boolean theirAnswer){
@@ -110,7 +118,22 @@ public class MainActivity extends AppCompatActivity {
         //check if their answer matches expected answer
         // if (generateQuestions().true )
 
+        if (theirAnswer == currentQuestion.isAnswer()){
+            //correct
+             Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
+              score++;
 
+
+        } else{
+            //false
+              Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+
+
+
+
+        }
+
+       setUpQuestion();
 
 
     }

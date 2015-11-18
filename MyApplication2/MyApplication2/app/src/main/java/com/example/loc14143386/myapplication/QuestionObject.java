@@ -13,6 +13,7 @@ public class QuestionObject {
 
     private String question;
     private boolean answer;
+
     private int picture;
 
     public QuestionObject(String question, boolean answer, int picture) {

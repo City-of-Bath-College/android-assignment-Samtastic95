@@ -6,12 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class IntroductionActivity extends AppCompatActivity {
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduction);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
