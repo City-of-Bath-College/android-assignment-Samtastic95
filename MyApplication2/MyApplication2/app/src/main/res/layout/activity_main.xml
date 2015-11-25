@@ -4,42 +4,42 @@
     android:background="#FFFF99"
      tools:context=".MainActivity">
 
-//Displays question on the screen. //
-    <TextView
-        android:id="@+id/lblQuestion"
-        android:text="It&apos;s possible to convert PXM (PCSX) files into BK2 (Bizhawk) files. as of September 2015?  "
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:textSize="22sp"
-        android:gravity="center"
-        />
+    <!--//Displays question on the screen. //-->
+        <TextView
+            android:id="@+id/lblQuestion"
+            android:text="It&apos;s possible to convert PXM (PCSX) files into BK2 (Bizhawk) files. as of September 2015?  "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="22sp"
+            android:gravity="center"
+            />
 
-    <Button
-        android:id="@+id/btnTrue"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/lblQuestion"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="30dp"
-        android:text="TRUE"
-        android:textSize="24sp"
-        android:padding="10dp"/>
+        <Button
+            android:id="@+id/btnTrue"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/lblQuestion"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="30dp"
+            android:text="TRUE"
+            android:textSize="24sp"
+            android:padding="10dp"/>
 
 
-// Button information goes here. Shows width, height and where it is positioned onscreen. //
-    <Button
-        android:id="@+id/btnFalse"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/lblQuestion"
-        android:layout_alignParentRight="true"
-        android:layout_margin="30dp"
-        android:text="fALSE"
-        android:textSize="24sp"
-        android:padding="10dp"/>
+        <!--// Button information goes here. Shows width, height and where it is positioned onscreen. //-->
+            <Button
+                android:id="@+id/btnFalse"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/lblQuestion"
+                android:layout_alignParentRight="true"
+                android:layout_margin="30dp"
+                android:text="fALSE"
+                android:textSize="24sp"
+                android:padding="10dp"/>
 
-    // Displays images onscreen. //
+            <!-- Displays images onscreen. //-->
     <ImageView
         android:id="@+id/imgPicture"
         android:layout_width="200dp"
@@ -48,6 +48,20 @@
         android:layout_above="@id/lblQuestion"
         android:layout_centerHorizontal="true"
         android:layout_margin="30dp"/>
+
+
+    <TextView
+        android:id="@+id/lblscore"
+        android:text="Score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:textSize="22sp"
+        android:gravity="right"
+
+        />
+
 
 
 
