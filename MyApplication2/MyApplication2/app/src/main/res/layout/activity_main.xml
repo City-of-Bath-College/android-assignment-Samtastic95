@@ -58,11 +58,18 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
         android:textSize="22sp"
-        android:gravity="right"
+        android:gravity="right"/>
 
-        />
-
-
+    <Button
+        android:id="@+id/btnHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hint"
+        android:textSize="55sp"
+        android:clickable="true"
+        android:gravity="left"
+        android:layout_alignParentBottom="true"
+         />
 
 
 

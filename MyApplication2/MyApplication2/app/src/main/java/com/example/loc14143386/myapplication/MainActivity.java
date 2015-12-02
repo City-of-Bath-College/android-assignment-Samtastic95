@@ -1,5 +1,6 @@
 package com.example.loc14143386.myapplication;
 
+import android.content.DialogInterface;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +24,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgPicture;
     private TextView lblscore;
 
+
     private List<QuestionObject> questions;
     private QuestionObject currentQuestion;
     private int index;
     private int score;
+    private Button btnHint;
 
     //Button true and button false code goes here //
     @Override
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         tblQuestion = (TextView) findViewById(R.id.lblQuestion);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
         lblscore = (TextView) findViewById(R.id.lblscore);
+        btnHint = (Button) findViewById((R.id.btnHint));
+
 
         index = 0;
         score =0;
@@ -66,6 +70,16 @@ lblscore.setText("score " + score);
             }
         });
 
+
+        btnHint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(MainActivity.this, "Look at Google for all information for electronic games.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         generateQuestions();
 
         setUpQuestion();
@@ -82,14 +96,14 @@ lblscore.setText("score " + score);
         questions.add(one);
         QuestionObject two = new QuestionObject("Bop It Original was made in 1996.",true, R.drawable.bopit1996);
         questions.add(two) ;
-        QuestionObject three = new QuestionObject("Dan Klistner invented Bop It Bounce.",false, R.drawable.bopit2010);
+        QuestionObject three = new QuestionObject("Dan Klistner's company, KID Group, made a prototype for Bop It Bounce.",false, R.drawable.bopit2010);
         questions.add(three) ;
         QuestionObject four = new QuestionObject("Bop It was re-designed in 2008 in an oval shape.",true, R.drawable.bopit2008logo);
         questions.add (four) ;
         QuestionObject five = new QuestionObject("Tiger Electronics released a game with six coloured knobs sticking out in 1996.",true, R.drawable.tigerelectronics);
-        questions.add (five) ;
+        questions.add(five) ;
         QuestionObject six = new QuestionObject("Bop It Extreme was re-released with Bop It Shout programming in 2011.",true, R.drawable.bopit2008logo);
-        questions.add (six) ;
+        questions.add(six) ;
         QuestionObject seven = new QuestionObject("Simon was re-invented by Klistner in 2013.",true, R.drawable.simonswipelogo);
         questions.add(seven) ;
         QuestionObject eight = new QuestionObject ("Most electronic games have a hidden test mode.", true, R.drawable.bopit2008logo);
@@ -107,7 +121,11 @@ lblscore.setText("score " + score);
             //they used up all their questions to end the game.
             Log.d("MyApplication2", "End s all the questions");
             //endGame();
-        } else {
+            index = 0;
+            score = 0;
+            lblscore.setText("score = " + score);
+            Toast.makeText(getApplicationContext(), "This game is finished! Wanna play again?", Toast.LENGTH_LONG).show();
+      }
 
 
             // set up nroaml questions
@@ -120,14 +138,6 @@ lblscore.setText("score " + score);
             lblscore.setText("score = " + score);
 
 
-
-            if (index == 10) {
-                index = 0;
-
-
-
-            }
-        }
     }
 
     private void determineButtonPress(boolean theirAnswer){
@@ -138,7 +148,7 @@ lblscore.setText("score " + score);
         if (theirAnswer == currentQuestion.isAnswer()){
             //correct
              Toast.makeText(MainActivity.this, "correct!!", Toast.LENGTH_SHORT).show();
-              score++;
+            score++;
 
 
         } else{
@@ -151,8 +161,14 @@ lblscore.setText("score " + score);
         setUpQuestion();
 
 
-
     }
+
+
+
+
+
+
+
 
 } //ends activity
 
